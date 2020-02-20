@@ -48,10 +48,10 @@ public class ArticleFragment extends Fragment {
         super.onCreate(savedInstanceState);
         lstArticles = new ArrayList<>();
         lstArticles.add(new Article("17 harus tau",R.drawable.img_hero));
-        lstArticles.add(new Article("17 harus tau",R.drawable.img_hero));
-        lstArticles.add(new Article("17 harus tau",R.drawable.img_hero));
-        lstArticles.add(new Article("17 harus tau",R.drawable.img_hero));
-        lstArticles.add(new Article("17 harus tau",R.drawable.img_hero));
+        lstArticles.add(new Article("18 harus tau",R.drawable.img_hero));
+        lstArticles.add(new Article("19 harus tau",R.drawable.img_hero));
+        lstArticles.add(new Article("20 harus tau",R.drawable.img_hero));
+        lstArticles.add(new Article("21 harus tau",R.drawable.img_hero));
 
     }
 
