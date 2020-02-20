@@ -1,14 +1,15 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.greeve.greeve.ui.greeve.shop.ShopFragment">
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context="com.greeve.greeve.ui.greeve.tutorial.TutorialFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_heroes_tutorial"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:textSize="20sp"
-        android:text="Fragment Favorite" />
+        tools:listitem="@layout/item_card_view_shop" />
 
-</FrameLayout>
+</RelativeLayout>
