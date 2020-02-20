@@ -1,19 +1,18 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="16dp"
     tools:context="com.greeve.greeve.ui.greeve.tutorial.TutorialFragment">
-
-    <Button
-        android:id="@+id/btnAmbil"
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_heroes_article"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="ambil foto"/>
+        android:layout_height="match_parent"
+        tools:listitem="@layout/item_card_view_tutorial" />
+</ScrollView>
 
-    <ImageView
-        android:id="@+id/ivGambar"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" />
-</LinearLayout>
+</RelativeLayout>

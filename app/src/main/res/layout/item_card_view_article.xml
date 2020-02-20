@@ -22,7 +22,8 @@
             android:layout_height="116dp"
             android:layout_marginBottom="4dp"
             android:scaleType="centerCrop"
-            android:src="@color/colorAccent"/>
+            android:src="@color/colorAccent"
+            android:contentDescription="@string/todo" />
 
         <TextView
             android:id="@+id/name"
@@ -36,7 +37,7 @@
             android:layout_toRightOf="@id/image"
             android:textSize="16sp"
             android:textStyle="bold"
-            android:tooltipText="Article Title"/>
+            android:tooltipText="@string/article_title"/>
 
         <!--        <LinearLayout-->
         <!--            android:id="@+id/layout_button"-->

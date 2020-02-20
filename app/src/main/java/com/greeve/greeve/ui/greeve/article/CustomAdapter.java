@@ -31,7 +31,7 @@ public class CustomAdapter extends RecyclerView.Adapter {
     @Override
     public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         // infalte the item Layout
-        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_card_view, parent, false);
+        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_card_view_article, parent, false);
 // set the view's size, margins, paddings and layout parameters
         MyViewHolder vh = new MyViewHolder(v); // pass the view to View Holder
         return vh;

@@ -50,7 +50,7 @@ public class ArticleFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
 
 // get the reference of RecyclerView
-            RecyclerView recyclerView = (RecyclerView) getView().findViewById(R.id.recyclerView);
+            RecyclerView recyclerView = (RecyclerView) getView().findViewById(R.id.rv_heroes_article);
 // set a LinearLayoutManager with default vertical orientaion
             LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getActivity().getApplicationContext());
             recyclerView.setLayoutManager(linearLayoutManager); // set LayoutManager to RecyclerView
