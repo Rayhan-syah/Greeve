@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Greeve</string>
+
+    <string name="gv_login_title">Welcome to Greeve</string>
+    <string name="gv_login_desc"> Manfaatkan sampah dengan kreatifitasmu. \n
+        Selamatkan lingkungan bersama \n Aplikasi Greeve!</string>
+    <string name="todo">TODO</string>
+    <string name="sign_up_with_google">Sign Up With Google</string>
+    <string name="tv_title">Title</string>
+</resources>
