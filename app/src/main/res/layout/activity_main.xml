@@ -24,4 +24,5 @@
         app:itemTextColor="@color/navigationIcon"
         />
 
+
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
