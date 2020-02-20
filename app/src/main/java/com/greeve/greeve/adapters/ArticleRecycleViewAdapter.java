@@ -1,6 +1,7 @@
 package com.greeve.greeve.adapters;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,16 +11,17 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.greeve.greeve.DetailArticleActivity;
 import com.greeve.greeve.R;
 import com.greeve.greeve.models.Article;
 
 import java.util.List;
 
-public class RecycleViewAdapter extends RecyclerView.Adapter<RecycleViewAdapter.MyViewHolder> {
+public class ArticleRecycleViewAdapter extends RecyclerView.Adapter<ArticleRecycleViewAdapter.MyViewHolder> {
     private Context mContext;
     List<Article> mData;
 //Ini Adapter
-    public RecycleViewAdapter(Context mContext, List<Article> mData) {
+    public ArticleRecycleViewAdapter(Context mContext, List<Article> mData) {
         this.mContext = mContext;
         this.mData = mData;
     }
@@ -34,9 +36,18 @@ public class RecycleViewAdapter extends RecyclerView.Adapter<RecycleViewAdapter.
     }
 
     @Override
-    public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull final MyViewHolder holder, int position) {
         holder.tv_title.setText(mData.get(position).getTitle());
         holder.img_article.setImageResource(mData.get(position).getPhoto());
+
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(mContext, DetailArticleActivity.class);
+                intent.putExtra("Title", holder.tv_title.getText().toString());
+                mContext.startActivity(intent);
+            }
+        });
     }
 
     @Override
