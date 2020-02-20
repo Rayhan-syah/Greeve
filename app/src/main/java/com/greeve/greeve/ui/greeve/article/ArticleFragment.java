@@ -12,7 +12,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.greeve.greeve.R;
-import com.greeve.greeve.adapters.RecycleViewAdapter;
+import com.greeve.greeve.adapters.ArticleRecycleViewAdapter;
 import com.greeve.greeve.models.Article;
 
 import java.util.ArrayList;
@@ -34,10 +34,12 @@ public class ArticleFragment extends Fragment {
         v = inflater.inflate(R.layout.fragment_article,container,false);
         // Inflate the layout for this fragment
         myrecyclerview = (RecyclerView) v.findViewById(R.id.rv_heroes_article);
-        RecycleViewAdapter recycleViewAdapter = new RecycleViewAdapter(getContext(),lstArticles);
+        ArticleRecycleViewAdapter recycleViewAdapter = new ArticleRecycleViewAdapter(getContext(),lstArticles);
         myrecyclerview.setLayoutManager(new LinearLayoutManager(getActivity()));
         myrecyclerview.setAdapter(recycleViewAdapter);
+
         return v;
+
 
     }
 //Ini tambah data
