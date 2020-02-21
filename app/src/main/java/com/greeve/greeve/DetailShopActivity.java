@@ -165,6 +165,13 @@ public class DetailShopActivity extends AppCompatActivity {
                 Toast.makeText(DetailShopActivity.this, "Ukuran : "+dUkuran+" Warna : "+dWarna
                         +" Jumlah : "+edJumlah.getText().toString()+" Harga : "+dPrice.getText().toString()
                         , Toast.LENGTH_SHORT).show();
+
+                Intent i = new Intent(DetailShopActivity.this, CartActivity.class);
+                i.putExtra("Title", dTitle.getText().toString());
+                i.putExtra("Harga", dPrice.getText().toString());
+                i.putExtra("Informasi", "Ukuran : "+dUkuran+" Warna : "+dWarna
+                        +" Jumlah : "+edJumlah.getText().toString()+" Harga : "+dPrice.getText().toString());
+                startActivity(i);
             }
         });
     }

@@ -1,22 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@android:color/white"
+    android:orientation="vertical"
     tools:context=".DetailArticleActivity">
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
+
         <RelativeLayout
+            android:id="@+id/rl_hero_tutorial"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:layout_marginLeft="16dp"
-            android:layout_marginRight="16dp"
-            android:layout_marginBottom="16dp">
+            android:layout_marginRight="16dp">
+
             <de.hdodenhof.circleimageview.CircleImageView
                 android:layout_width="56dp"
                 android:layout_height="56dp"
@@ -25,6 +24,7 @@
                 android:id="@+id/profile_image"
                 android:layout_marginRight="16dp"
                 android:layout_marginEnd="16dp" />
+
             <TextView
                 android:id="@+id/tv_writer"
                 android:layout_width="match_parent"
@@ -44,29 +44,9 @@
                 android:textColor="#C4C4C4" />
         </RelativeLayout>
 
-        <TextView
+        <WebView
+            android:id="@+id/web_view_article"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="20dp"
-            android:layout_marginBottom="10dp"
-            android:layout_gravity="center"
-            android:gravity="center"
-            android:id="@+id/title_detail_article"
-            android:textColor="#000000"
-            android:textSize="18sp"
-            android:textAlignment="center"/>
-        <ImageView
-            android:id="@+id/img_view_detail"
-            android:layout_width="match_parent"
-            android:layout_marginHorizontal="20dp"
-            android:layout_marginBottom="10dp"
-            android:layout_height="200dp"/>
-        <TextView
-            android:textAlignment="inherit"
-            android:id="@+id/tv_desc_article_detail"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="20dp"
-            />
-    </LinearLayout>
-</ScrollView>
+            android:layout_height="match_parent"/>
+
+</LinearLayout>
