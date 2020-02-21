@@ -52,7 +52,7 @@ public class TutorialFragment extends Fragment {
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         lstTutorial = new ArrayList<>();
-        lstTutorial.add(new Tutorial("Hai", R.raw.videos1));
+        lstTutorial.add(new Tutorial("Hai", R.drawable.ic_home_black_24dp));
 
     }
 
