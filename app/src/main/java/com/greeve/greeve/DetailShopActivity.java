@@ -48,8 +48,23 @@ public class DetailShopActivity extends AppCompatActivity {
         dTitle.setText(intent.getStringExtra("Title"));
         dPrice.setText(intent.getStringExtra("Price"));
 
-        if (dTitle.getText().toString().equals("Satu")){
-            dImage.setImageResource(R.drawable.ic_add_box_black_24dp);
+        if (dTitle.getText().toString().equals("Trashe Shoe")){
+            dImage.setImageResource(R.drawable.barang1);
+        }
+        else if (dTitle.getText().toString().equals("Celemek")){
+            dImage.setImageResource(R.drawable.barang2);
+        }
+        else if (dTitle.getText().toString().equals("Cermin Hias")){
+            dImage.setImageResource(R.drawable.barang3);
+        }
+        else if (dTitle.getText().toString().equals("Lampu Gantung Hias")){
+            dImage.setImageResource(R.drawable.barang4);
+        }
+        else if (dTitle.getText().toString().equals("Hiasan dari Cangkir")){
+            dImage.setImageResource(R.drawable.barang5);
+        }
+        else if (dTitle.getText().toString().equals("Sandalas")){
+            dImage.setImageResource(R.drawable.barang6);
         }
 
         btnUkuranSatu.setOnClickListener(new View.OnClickListener() {
