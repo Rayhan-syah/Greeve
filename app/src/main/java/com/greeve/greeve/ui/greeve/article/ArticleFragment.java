@@ -47,8 +47,7 @@ public class ArticleFragment extends Fragment {
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         lstArticles = new ArrayList<>();
-        lstArticles.add(new Article("Hello",R.drawable.img_hero));
-
+        lstArticles.add(new Article("Hello","https://greevelaw.files.wordpress.com/2020/02/screenshot_2020-02-21-mengurangi-sampah-popok-mengolahnya-menjadi-pupuk-e28094-zerowaste-id.png","https://greeve.law.blog/2020/02/21/mengurangi-sampah-popok-mengolahnya-menjadi-pupuk"));
     }
 
 }
