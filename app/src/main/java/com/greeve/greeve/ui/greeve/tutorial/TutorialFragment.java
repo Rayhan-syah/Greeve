@@ -53,11 +53,16 @@ public class TutorialFragment extends Fragment {
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         lstTutorial = new ArrayList<>();
-        lstTutorial.add(new Tutorial("Kertas Jadi Topeng","https://firebasestorage.googleapis.com/v0/b/greeve-gr.appspot.com/o/Topeng%20kertas.mp4?alt=media&token=502a6d9e-ce0b-430f-a246-db06ce1d31fc"));
-        lstTutorial.add(new Tutorial("Pesawat Dari Kerta","https://firebasestorage.googleapis.com/v0/b/greeve-gr.appspot.com/o/Pesawat%20dari%20kertas.mp4?alt=media&token=f505e4a0-cf75-430a-9417-361b122f7494"));
-        lstTutorial.add(new Tutorial("Cumi Cumi Kertas","https://firebasestorage.googleapis.com/v0/b/greeve-gr.appspot.com/o/Cumi-cumi%20kertas.mp4?alt=media&token=cae9b16a-bc2a-42de-9f42-d9d838f204ef"));
-        lstTutorial.add(new Tutorial("Kapal kertas","https://firebasestorage.googleapis.com/v0/b/greeve-gr.appspot.com/o/Kapal%20kertas.mp4?alt=media&token=460bf172-a86b-4ddd-887c-df005dc64221"));
-        lstTutorial.add(new Tutorial("Celemek dari bahan bekad","https://firebasestorage.googleapis.com/v0/b/greeve-gr.appspot.com/o/1.mp4?alt=media&token=0da09d4a-348f-4cf3-a115-2c88be541648"));
+        lstTutorial.add(new Tutorial("Kertas Jadi Topeng",
+                "https://youtu.be/jOXPLB-uo1g"));
+        lstTutorial.add(new Tutorial("Celemek dari bahan bekas",
+                "https://firebasestorage.googleapis.com/v0/b/greeve-gr.appspot.com/o/1.mp4?alt=media&token=0da09d4a-348f-4cf3-a115-2c88be541648"));
+        lstTutorial.add(new Tutorial("Cermin Hias",
+                "https://firebasestorage.googleapis.com/v0/b/greeve-gr.appspot.com/o/2.mp4?alt=media&token=0f6f09c1-b494-4cc8-bc10-374cea3f0fef"));
+        lstTutorial.add(new Tutorial("Lampu Hias",
+                "https://firebasestorage.googleapis.com/v0/b/greeve-gr.appspot.com/o/3.mp4?alt=media&token=90601922-ea06-42d2-af71-877d221ce9d8"));
+        lstTutorial.add(new Tutorial("Celemek dari bahan bekad",
+                "https://firebasestorage.googleapis.com/v0/b/greeve-gr.appspot.com/o/1.mp4?alt=media&token=0da09d4a-348f-4cf3-a115-2c88be541648"));
     }
 
 }
