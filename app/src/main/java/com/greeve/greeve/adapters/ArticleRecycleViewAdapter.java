@@ -1,26 +1,30 @@
 package com.greeve.greeve.adapters;
 
 import android.content.Context;
-import android.content.Intent;
+import android.provider.ContactsContract;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.greeve.greeve.DetailArticleActivity;
+import com.bumptech.glide.Glide;
 import com.greeve.greeve.R;
 import com.greeve.greeve.models.Article;
 
+import java.util.ArrayList;
 import java.util.List;
+
 
 public class ArticleRecycleViewAdapter extends RecyclerView.Adapter<ArticleRecycleViewAdapter.MyViewHolder> {
     private Context mContext;
     List<Article> mData;
-//Ini Adapter
+
+
     public ArticleRecycleViewAdapter(Context mContext, List<Article> mData) {
         this.mContext = mContext;
         this.mData = mData;
@@ -31,31 +35,22 @@ public class ArticleRecycleViewAdapter extends RecyclerView.Adapter<ArticleRecyc
     public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View v;
         v = LayoutInflater.from(mContext).inflate(R.layout.item_card_view_article,parent,false);
-
-        return new MyViewHolder(v);
+        return new ArticleRecycleViewAdapter.MyViewHolder(v);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull final MyViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
+
         holder.tv_title.setText(mData.get(position).getTitle());
         holder.img_article.setImageResource(mData.get(position).getPhoto());
-
-        holder.itemView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(mContext, DetailArticleActivity.class);
-                intent.putExtra("Title", holder.tv_title.getText().toString());
-                mContext.startActivity(intent);
-            }
-        });
     }
 
     @Override
     public int getItemCount() {
-        return mData.size();
+        return 0;
     }
 
-    public static class MyViewHolder extends RecyclerView.ViewHolder{
+    public class MyViewHolder extends RecyclerView.ViewHolder {
         TextView tv_title;
         ImageView img_article;
         public MyViewHolder(@NonNull View itemView) {

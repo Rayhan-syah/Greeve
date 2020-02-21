@@ -1,14 +1,21 @@
 package com.greeve.greeve.adapters;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.webkit.WebChromeClient;
+import android.webkit.WebView;
+import android.webkit.WebViewClient;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.MediaController;
 import android.widget.TextView;
 import android.widget.VideoView;
 
+import com.greeve.greeve.FullVideoTutorialActivity;
 import com.greeve.greeve.R;
 import com.greeve.greeve.models.Tutorial;
 
@@ -37,11 +44,17 @@ public class TutorialRecycleViewAdapter extends RecyclerView.Adapter<TutorialRec
 
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
+        final Tutorial current = mData.get(position);
         holder.tv_title.setText(mData.get(position).getTitle());
-        holder.video_tutorial.setVideoPath(mData.get(position).getTitle());
-        holder.video_tutorial.setMediaController(new MediaController(mContext));
-        holder.video_tutorial.start();
-//        holder.video_tutorial.setImageResource(mData.get(position).getPhoto());
+        holder.webView.loadUrl(current.getLink());
+        holder.btn_fullscreen.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(mContext, FullVideoTutorialActivity.class);
+                i.putExtra("url",current.getLink());
+                mContext.startActivity(i);
+            }
+        });
 
     }
 
@@ -52,11 +65,17 @@ public class TutorialRecycleViewAdapter extends RecyclerView.Adapter<TutorialRec
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
         TextView tv_title;
-        VideoView video_tutorial;
+        WebView webView;
+        Button btn_fullscreen;
+        @SuppressLint("SetJavaScriptEnabled")
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
             tv_title = (TextView)itemView.findViewById(R.id.tv_title_videos);
-            video_tutorial = (VideoView)itemView.findViewById(R.id.vv_videos);
+            btn_fullscreen = (Button)itemView.findViewById(R.id.btn_fullscreen);
+            webView = (WebView) itemView.findViewById(R.id.web_view_tutorial);
+            webView.setWebViewClient(new WebViewClient());
+            webView.setWebChromeClient(new WebChromeClient());
+            webView.getSettings().setJavaScriptEnabled(true);
         }
     }
 }

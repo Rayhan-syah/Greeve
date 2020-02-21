@@ -21,9 +21,10 @@ import java.util.List;
 
 public class ArticleFragment extends Fragment {
 
-    private View v;
-    private RecyclerView myrecyclerview;
-    private List<Article> lstArticles;
+    View v;
+    RecyclerView myrecyclerview;
+    List<Article> lstArticles;
+
 
     public ArticleFragment() {
         // Required empty public constructor
@@ -46,7 +47,7 @@ public class ArticleFragment extends Fragment {
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         lstArticles = new ArrayList<>();
-        lstArticles.add(new Article(R.string.title_article1,R.drawable.article1));
+        lstArticles.add(new Article("Hello",R.drawable.img_hero));
 
     }
 

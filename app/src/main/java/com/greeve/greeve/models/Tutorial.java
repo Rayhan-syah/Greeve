@@ -3,11 +3,11 @@ package com.greeve.greeve.models;
 public class Tutorial {
 
     private String title;
-    private int video;
+    private String link;
 
-    public Tutorial(String title, int video) {
+    public Tutorial(String title, String link) {
         this.title = title;
-        this.video = video;
+        this.link = link;
     }
 
     public String getTitle() {
@@ -18,12 +18,11 @@ public class Tutorial {
         this.title = title;
     }
 
-    public int getVideo() {
-        return video;
+    public String getLink() {
+        return link;
     }
 
-    public void setVideo(int video) {
-        this.video = video;
+    public void setLink(String link) {
+        this.link = link;
     }
-
 }
