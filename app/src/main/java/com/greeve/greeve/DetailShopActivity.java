@@ -48,8 +48,23 @@ public class DetailShopActivity extends AppCompatActivity {
         dTitle.setText(intent.getStringExtra("Title"));
         dPrice.setText(intent.getStringExtra("Price"));
 
-        if (dTitle.getText().toString().equals("Satu")){
-            dImage.setImageResource(R.drawable.ic_add_box_black_24dp);
+        if (dTitle.getText().toString().equals("Trashe Shoe")){
+            dImage.setImageResource(R.drawable.barang1);
+        }
+        else if (dTitle.getText().toString().equals("Celemek")){
+            dImage.setImageResource(R.drawable.barang2);
+        }
+        else if (dTitle.getText().toString().equals("Cermin Hias")){
+            dImage.setImageResource(R.drawable.barang3);
+        }
+        else if (dTitle.getText().toString().equals("Lampu Gantung Hias")){
+            dImage.setImageResource(R.drawable.barang4);
+        }
+        else if (dTitle.getText().toString().equals("Hiasan dari Cangkir")){
+            dImage.setImageResource(R.drawable.barang5);
+        }
+        else if (dTitle.getText().toString().equals("Sandalas")){
+            dImage.setImageResource(R.drawable.barang6);
         }
 
         btnUkuranSatu.setOnClickListener(new View.OnClickListener() {
@@ -150,6 +165,13 @@ public class DetailShopActivity extends AppCompatActivity {
                 Toast.makeText(DetailShopActivity.this, "Ukuran : "+dUkuran+" Warna : "+dWarna
                         +" Jumlah : "+edJumlah.getText().toString()+" Harga : "+dPrice.getText().toString()
                         , Toast.LENGTH_SHORT).show();
+
+                Intent i = new Intent(DetailShopActivity.this, CartActivity.class);
+                i.putExtra("Title", dTitle.getText().toString());
+                i.putExtra("Harga", dPrice.getText().toString());
+                i.putExtra("Informasi", "Ukuran : "+dUkuran+" Warna : "+dWarna
+                        +" Jumlah : "+edJumlah.getText().toString()+" Harga : "+dPrice.getText().toString());
+                startActivity(i);
             }
         });
     }

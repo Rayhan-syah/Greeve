@@ -53,16 +53,16 @@ public class TutorialFragment extends Fragment {
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         lstTutorial = new ArrayList<>();
-        lstTutorial.add(new Tutorial("Kertas Jadi Topeng",
-                "https://youtu.be/jOXPLB-uo1g"));
+        lstTutorial.add(new Tutorial("Kertas jadi topeng",
+                "https://streamable.com/opzgh"));
         lstTutorial.add(new Tutorial("Celemek dari bahan bekas",
-                "https://firebasestorage.googleapis.com/v0/b/greeve-gr.appspot.com/o/1.mp4?alt=media&token=0da09d4a-348f-4cf3-a115-2c88be541648"));
-        lstTutorial.add(new Tutorial("Cermin Hias",
-                "https://firebasestorage.googleapis.com/v0/b/greeve-gr.appspot.com/o/2.mp4?alt=media&token=0f6f09c1-b494-4cc8-bc10-374cea3f0fef"));
-        lstTutorial.add(new Tutorial("Lampu Hias",
-                "https://firebasestorage.googleapis.com/v0/b/greeve-gr.appspot.com/o/3.mp4?alt=media&token=90601922-ea06-42d2-af71-877d221ce9d8"));
-        lstTutorial.add(new Tutorial("Celemek dari bahan bekad",
-                "https://firebasestorage.googleapis.com/v0/b/greeve-gr.appspot.com/o/1.mp4?alt=media&token=0da09d4a-348f-4cf3-a115-2c88be541648"));
+                "https://streamable.com/26t89"));
+        lstTutorial.add(new Tutorial("Cermin Cantik",
+                "https://streamable.com/gq9d8"));
+        lstTutorial.add(new Tutorial("Rak hiasan",
+                "https://streamable.com/47z5e"));
+        lstTutorial.add(new Tutorial("Membuat Kapal",
+                "https://streamable.com/a5z9f"));
     }
 
 }

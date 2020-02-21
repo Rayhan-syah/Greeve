@@ -46,11 +46,11 @@ public class ShopFragment extends Fragment {
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         lstShop = new ArrayList<>();
-        lstShop.add(new Shop("Satu","2000",R.drawable.ic_add_box_black_24dp));
-        lstShop.add(new Shop("Dua","4000",R.drawable.ic_add_shopping_cart_black_24dp));
-        lstShop.add(new Shop("Tiga","6000",R.drawable.ic_arrow_forward_black_24dp));
-        lstShop.add(new Shop("Empat","8000",R.drawable.article1));
-        lstShop.add(new Shop("Lima","10000",R.drawable.ic_library_books_black_24dp));
-        lstShop.add(new Shop("Enam","12000",R.drawable.img_hero));
+        lstShop.add(new Shop("Trashe Shoe","11000",R.drawable.barang1));
+        lstShop.add(new Shop("Celemek","45000",R.drawable.barang2));
+        lstShop.add(new Shop("Cermin Hias","50000",R.drawable.barang3));
+        lstShop.add(new Shop("Lampu Gantung Hias","35000",R.drawable.barang4));
+        lstShop.add(new Shop("Hiasan dari Cangkir","29000",R.drawable.barang5));
+        lstShop.add(new Shop("Sandalas","29000",R.drawable.barang6));
     }
 }
