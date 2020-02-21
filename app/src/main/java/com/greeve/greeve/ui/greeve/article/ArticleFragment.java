@@ -40,7 +40,6 @@ public class ArticleFragment extends Fragment {
 
         return v;
 
-
     }
 //Ini tambah data
     @Override

@@ -53,7 +53,6 @@ public class TutorialFragment extends Fragment {
         super.onCreate(savedInstanceState);
         lstTutorial = new ArrayList<>();
 //        lstTutorial.add(new Tutorial("Hai", R.raw.videos1));
-
     }
 
 }
