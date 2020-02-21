@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="16dp"
-    tools:context="com.greeve.greeve.ui.greeve.tutorial.TutorialFragment">
+    tools:context="com.greeve.greeve.ui.greeve.shop.ShopFragment">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_heroes_shop"

@@ -63,10 +63,10 @@ public class MainActivity extends AppCompatActivity {
                     initFragment(new ArticleFragment());
                     return true;
                 case R.id.navigation_tutorial:
-                    initFragment(new ShopFragment());
+                    initFragment(new TutorialFragment());
                     return true;
                 case R.id.navigation_shop:
-                    initFragment(new TutorialFragment());
+                    initFragment(new ShopFragment());
                     return true;
                 case R.id.navigation_profile:
                     initFragment(new ProfileFragment());
