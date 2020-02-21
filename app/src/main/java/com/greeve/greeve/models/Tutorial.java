@@ -18,9 +18,7 @@ public class Tutorial {
         this.title = title;
     }
 
-    public int getVideo() {
-        return video;
-    }
+    public int getVideo() { return video; }
 
     public void setVideo(int video) {
         this.video = video;
