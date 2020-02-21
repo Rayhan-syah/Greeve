@@ -49,6 +49,7 @@ public class ShopRecycleViewAdapter extends RecyclerView.Adapter<ShopRecycleView
             public void onClick(View v) {
                 Intent intent = new Intent(mContext, DetailShopActivity.class);
                 intent.putExtra("Title", holder.tv_title.getText().toString());
+                intent.putExtra("Price", holder.tv_price.getText().toString());
                 mContext.startActivity(intent);
             }
         });

@@ -27,7 +27,7 @@ public class DetailArticleActivity extends AppCompatActivity {
 //            case R.string.title_article1:
 //                break;
 //        }
-        if (dTitle.getText().toString().equals(R.string.title_article1)){
+        if (dTitle.getText().toString().equals("Lerak sebagai alternatif deterjen dan sabun")){
             dImage.setImageResource(R.drawable.article1);
             dDesc.setText(R.string.desc_article1);
         }
