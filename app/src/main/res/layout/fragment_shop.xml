@@ -10,6 +10,7 @@
         android:id="@+id/rv_heroes_shop"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_marginBottom="60dp"
         tools:listitem="@layout/item_card_view_shop" />
 
 </RelativeLayout>
